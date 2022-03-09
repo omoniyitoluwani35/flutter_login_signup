@@ -24,18 +24,19 @@ class _WelcomePageState extends State<WelcomePage> {
         padding: EdgeInsets.symmetric(vertical: 13),
         alignment: Alignment.center,
         decoration: BoxDecoration(
+            border: Border.all(color: Colors.white, width: 2),
             borderRadius: BorderRadius.all(Radius.circular(5)),
             boxShadow: <BoxShadow>[
               BoxShadow(
-                  color: Color(0xffdf8e33).withAlpha(100),
+                  color: Color(0xFFAED581).withAlpha(100),
                   offset: Offset(2, 4),
                   blurRadius: 8,
                   spreadRadius: 2)
             ],
-            color: Colors.white),
+            color: Colors.green),
         child: Text(
           'Login',
-          style: TextStyle(fontSize: 20, color: Color(0xfff7892b)),
+          style: TextStyle(fontSize: 20, color: Colors.black),
         ),
       ),
     );
@@ -92,26 +93,34 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 
   Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-          text: 'd',
-          style: GoogleFonts.portLligatSans(
-            textStyle: Theme.of(context).textTheme.headline1,
-            fontSize: 30,
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-          ),
-          children: [
-            TextSpan(
-              text: 'ev',
-              style: TextStyle(color: Colors.black, fontSize: 30),
-            ),
-            TextSpan(
-              text: 'rnz',
-              style: TextStyle(color: Colors.white, fontSize: 30),
-            ),
-          ]),
+    return Row(
+
+      children: [
+        RichText(
+          textAlign: TextAlign.center,
+          text: TextSpan(
+              text: 'W',
+              style: GoogleFonts.portLligatSans(
+                textStyle: Theme.of(context).textTheme.headline1,
+                fontSize: 70,
+                fontWeight: FontWeight.w700,
+                color: Colors.white,
+              ),
+              children: [
+                TextSpan(
+                  text: 'EL',
+                  style: TextStyle(color: Colors.black, fontSize: 70),
+                ),
+                TextSpan(
+                  text: 'COME',
+                  style: TextStyle(color: Colors.white, fontSize: 70),
+                ),
+              ]),
+        ),
+        Icon(Icons.headphones,
+          size: 70,
+        )
+      ],
     );
   }
 
@@ -134,7 +143,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    colors: [Color(0xfffbb448), Color(0xffe46b10)])),
+                    colors: [Colors.green, Colors.lightGreen])),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
